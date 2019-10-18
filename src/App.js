@@ -3,11 +3,16 @@ import { Route, Link } from "react-router-dom";
 import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from "./components/CharacterList.js";
+import styled from 'styled-components';
+import "./index.css";
 
+const MainBG = styled.main`
+  background-color: black;
+`;
 
 export default function App() {
   return (
-    <main>
+    <MainBG>
       <Header />
       <div className="nav-links">
           <Link to="/">Home</Link> <br />
@@ -17,6 +22,6 @@ export default function App() {
         <Route exact path="/" component={WelcomePage} />
         <Route path="/character-list" component={CharacterList} />
       </div>
-    </main>
+    </MainBG>
   );
 }

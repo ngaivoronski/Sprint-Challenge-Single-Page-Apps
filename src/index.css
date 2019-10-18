@@ -2,6 +2,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  color: white;
 }
 
 main {
@@ -36,4 +37,13 @@ main {
 
 header h1 {
   text-align: center;
+}
+
+a {
+  color: white;
+  @import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1rem;
+  text-decoration: none;
+  margin-left: 1em;
 }
