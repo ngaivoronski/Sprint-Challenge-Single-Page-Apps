@@ -52,7 +52,7 @@ export default function CharacterList() {
           origin={character.origin}
           
           />
-          <NavLink to={`/characters/${character.id}`}>Details</NavLink>
+          <NavLink to={`/character-list/${character.id}`}>Details</NavLink>
           </>
         )
       })}
