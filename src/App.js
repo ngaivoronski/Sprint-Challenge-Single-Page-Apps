@@ -3,6 +3,7 @@ import { Route, Link } from "react-router-dom";
 import Header from "./components/Header.js";
 import WelcomePage from "./components/WelcomePage.js";
 import CharacterList from "./components/CharacterList.js";
+import Character from "./components/Character.js"
 import styled from 'styled-components';
 import "./index.css";
 
@@ -20,7 +21,8 @@ export default function App() {
         </div>
       <div className="routes">
         <Route exact path="/" component={WelcomePage} />
-        <Route path="/character-list" component={CharacterList} />
+        <Route exact path="/character-list" component={CharacterList} />
+        <Route exact path="/character-list/:charID" component={Character} />
       </div>
     </MainBG>
   );

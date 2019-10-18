@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CharacterCard from "./CharacterCard";
 import SearchForm from "./SearchForm";
+import {Route, NavLink} from 'react-router-dom';
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
@@ -43,11 +44,16 @@ export default function CharacterList() {
     <section className="character-list">
       {characters.map(character => {
         return (
+          <>
           <CharacterCard
           name={character.name}
           gender={character.gender}
           image={character.image}
-          origin={character.origin} />
+          origin={character.origin}
+          
+          />
+          <NavLink to={`/characters/${character.id}`}>Details</NavLink>
+          </>
         )
       })}
     </section>
