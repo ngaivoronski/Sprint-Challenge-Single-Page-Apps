@@ -16,7 +16,7 @@ export default function SearchForm(props) {
 
   return (
     <section className="search-form">
-      <form onSubmit={submitForm}>
+      <form  onSubmit={submitForm}>
         <input name="search" id="search" type="text" placeholder="Search by name" value={search} onChange={changeHandler}/>
         <button type="submit">Search</button>
       </form>
